@@ -1,0 +1,126 @@
+25
+How the Grinch Stole Christmas!
+Dr Seuss
+Childrens
+Available
+On Shelf
+ASP.NET MVC 5
+Jon Galloway
+Action
+Available
+On Shelf
+Yertle the Turtle
+Dr Seuss
+Childrens
+Available
+On Shelf
+The Cat in The Hat
+Dr Seuss
+Childrens
+Available
+On Shelf
+Harry Potter: Deathly Hallows
+J.K Rowling
+Fantasy
+Available
+On Shelf
+All Light We Cant See
+Anthony Doerr
+Fiction
+Available
+On Shelf
+The Giving Tree
+Shel Silverstein
+Childrens
+Available
+On Shelf
+Where the Sidewalk Ends
+Shel Silverstein
+Childrens
+Available
+On Shelf
+To Kill A Mockingbird
+Harper Lee
+Fiction
+Available
+On Shelf
+Harry Potter: Chamber of Secrets
+J.K. Rowling
+Fantasy
+Available
+On Shelf
+Jaws
+Peter Benchley
+Action
+Available
+On Shelf
+The Gunslinger
+Stephen King
+SciFi
+Available
+On Shelf
+Frankenstein
+Mary Shelley
+SciFi
+Available
+On Shelf
+The Cuckoo's Calling
+Robert Galbraith
+Mystery
+Available
+On Shelf
+Horton Hears A Who!
+Dr Seuss
+Childrens
+Available
+On Shelf
+Green Eggs and Ham
+Dr Seuss
+Childrens
+Available
+On Shelf
+Where The Wild Things Are
+Maurice Sendak
+Childrens
+Available
+On Shelf
+Madeline
+Ludwig Bemelmans
+Childrens
+Available
+On Shelf
+Flowers for Algernon
+Daniel Keyes
+SciFi
+Available
+On Shelf
+1984
+George Orwell
+Fiction
+Available
+On Shelf
+The Great Gatsby
+F. Scott Fitzgerald
+Fiction
+Available
+On Shelf
+The Old Man and the Sea
+Ernest Hemingway
+Fiction
+Available
+On Shelf
+Farewell to Arms
+Ernest Hemingway
+Fiction
+Available
+On Shelf
+Gone With the Wind
+Margaret Mitchell
+Fiction
+Available
+On Shelf
+Holes
+Louis Sachar
+Action
+Available
+On Shelf

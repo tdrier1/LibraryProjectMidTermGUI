@@ -8,7 +8,7 @@ namespace MidTermLibraryGUI
 {
     static class Program
     {
-        public static List <BookClass> BookArray = new List<BookClass>();
+        public static BookClass[] BookArray = new BookClass[1];
         /// <summary>
         /// The main entry point for the application.
         /// </summary>

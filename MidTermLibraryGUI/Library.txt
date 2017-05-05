@@ -1,9 +1,4 @@
-26
-Moby Dick
-Herman Melville
-Action
-Available
-On Shelf
+25
 George RR Martin
 Fantasy
 Available
@@ -129,3 +124,7 @@ Fiction
 Available
 On Shelf
 Holes
+Louis Sachar
+Action
+Available
+On Shelf

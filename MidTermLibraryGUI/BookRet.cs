@@ -14,69 +14,32 @@ namespace MidTermLibraryGUI
 {
     public partial class BookRet : Form
     {
-        private BookClass[] BookArray = new BookClass[1];
-
         public BookRet()
         {
             InitializeComponent();
-        }
-
-        private void Write(BookClass book)
-        {
-            StreamWriter sw = new StreamWriter("Library.txt");
-
-            sw.WriteLine(BookArray.Length);
-
-            for (int i = 0; i < BookArray.Length; i++)
-            {
-                sw.WriteLine(BookArray[i].TitleProp);
-                sw.WriteLine(BookArray[i].AuthorProp);
-                sw.WriteLine(BookArray[i].GenreProp);
-                sw.WriteLine(BookArray[i].StatusProp);
-                sw.WriteLine(BookArray[i].DueDateProp);
-            }
-            sw.Close();
-        }
-
-        private void Read()
-        {
-            StreamReader sr = new StreamReader("Library.txt");
-            BookArray = new BookClass[Convert.ToInt32(sr.ReadLine())];
-
-            for (int i = 0; i < BookArray.Length; i++)
-            {
-                BookArray[i] = new BookClass();
-                BookArray[i].TitleProp = sr.ReadLine();
-                BookArray[i].AuthorProp = sr.ReadLine();
-                BookArray[i].GenreProp = sr.ReadLine();
-                BookArray[i].StatusProp = sr.ReadLine();
-                BookArray[i].DueDateProp = sr.ReadLine();
-                BookArray[i].IndexProp = i;
-            }
-            sr.Close();
         }
 
         private void Search()
         {
             StreamReader sr = new StreamReader("Library.txt");
 
-            BookArray = new BookClass[Convert.ToInt32(sr.ReadLine())];
+            Program.BookArray = new BookClass[Convert.ToInt32(sr.ReadLine())];
 
             ReturnBox.Items.Clear();
 
-            for (int i = 0; i < BookArray.Length; i++)
+            for (int i = 0; i < Program.BookArray.Length; i++)
             {
-                BookArray[i] = new BookClass();
-                BookArray[i].TitleProp = sr.ReadLine();
-                BookArray[i].AuthorProp = sr.ReadLine();
-                BookArray[i].GenreProp = sr.ReadLine();
-                BookArray[i].StatusProp = sr.ReadLine();
-                BookArray[i].DueDateProp = sr.ReadLine();
-                BookArray[i].IndexProp = i;
+                Program.BookArray[i] = new BookClass();
+                Program.BookArray[i].TitleProp = sr.ReadLine();
+                Program.BookArray[i].AuthorProp = sr.ReadLine();
+                Program.BookArray[i].GenreProp = sr.ReadLine();
+                Program.BookArray[i].StatusProp = sr.ReadLine();
+                Program.BookArray[i].DueDateProp = sr.ReadLine();
+                Program.BookArray[i].IndexProp = i;
 
-                if (BookArray[i].StatusProp == "Checked Out")
+                if (Program.BookArray[i].StatusProp == "Checked Out")
                 {
-                    ReturnBox.Items.Add(BookArray[i].ToString());
+                    ReturnBox.Items.Add(Program.BookArray[i].ToString());
 
                 }
             }
@@ -89,25 +52,30 @@ namespace MidTermLibraryGUI
 
             if (ReturnBox.SelectedIndex <= 100)
             {
-                string text = ReturnBox.GetItemText(ReturnBox.SelectedItem);
-                var result = Regex.Match(text, @"\d+$").Value;
-                int index1 = Convert.ToInt32(result);
 
-                MessageBox.Show(BookArray[index1].TitleProp + " has been returned!");
-                BookArray[index1].StatusProp = "Available";
-                BookArray[index1].DueDateProp = "On Shelf";
+                string text = ReturnBox.GetItemText(ReturnBox.SelectedItem);
+                if (text != "")
+
+                {
+                    var result = Regex.Match(text, @"\d+$").Value;
+                    int index1 = Convert.ToInt32(result);
+
+                    MessageBox.Show(Program.BookArray[index1].TitleProp + " has been returned!");
+                    Program.BookArray[index1].StatusProp = "Available";
+                    Program.BookArray[index1].DueDateProp = "On Shelf";
+                }
             }
 
-            Write(book);
+            BookHelper.Write(book);
             ReturnBox.Items.Clear();
-            Read();
+            BookHelper.Read();
             Search();
 
         }
 
         private void BookRet_Load(object sender, EventArgs e)
         {
-            Read();
+            BookHelper.Read();
             Search();
         }
 

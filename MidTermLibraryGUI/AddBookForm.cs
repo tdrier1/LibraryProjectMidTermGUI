@@ -13,11 +13,11 @@ namespace MidTermLibraryGUI
 {
     public partial class AddBookForm : Form
     {
-        private BookClass[] BookArray = new BookClass[1];
+        private BookClass[] BookArray = new BookClass[1];   // creating new array from Book Class
 
         public AddBookForm()
         {
-            InitializeComponent();
+            InitializeComponent();  //
         }
 
         private void Write(BookClass book)
@@ -25,7 +25,7 @@ namespace MidTermLibraryGUI
             StreamWriter sw = new StreamWriter("Library.txt");
             sw.WriteLine(BookArray.Length + 1);
             sw.WriteLine(book.TitleProp);
-            sw.WriteLine(book.AuthorProp);
+            sw.WriteLine(book.AuthorProp);               //gets user input for all categories via stream writer
             sw.WriteLine(book.GenreProp);
             sw.WriteLine(book.StatusProp);
             sw.WriteLine(book.DueDateProp);
@@ -35,7 +35,7 @@ namespace MidTermLibraryGUI
                 sw.WriteLine(BookArray[i].TitleProp);
                 sw.WriteLine(BookArray[i].AuthorProp);
                 sw.WriteLine(BookArray[i].GenreProp);
-                sw.WriteLine(BookArray[i].StatusProp);
+                sw.WriteLine(BookArray[i].StatusProp);   // loops through array to output entire text file
                 sw.WriteLine(BookArray[i].DueDateProp);
             }
             sw.Close();
@@ -50,10 +50,10 @@ namespace MidTermLibraryGUI
             {
                 BookArray[i] = new BookClass();
                 BookArray[i].TitleProp = sr.ReadLine();
-                BookArray[i].AuthorProp = sr.ReadLine();
+                BookArray[i].AuthorProp = sr.ReadLine();        //reading data from text file and outputs to memory
                 BookArray[i].GenreProp = sr.ReadLine();
                 BookArray[i].StatusProp = sr.ReadLine();
-                BookArray[i].DueDateProp = sr.ReadLine();
+                BookArray[i].DueDateProp = sr.ReadLine();     
                 BookArray[i].IndexProp = i;
             }
             sr.Close();
@@ -63,7 +63,7 @@ namespace MidTermLibraryGUI
         {
             for(int i = 0; i <= 0; i++)
             {
-                BookListBox.Items.Add(BookArray[0].ToString());
+                BookListBox.Items.Add(BookArray[0].ToString());   //displays box with added values
             }
         }
 
@@ -71,20 +71,20 @@ namespace MidTermLibraryGUI
         {
             TitleInput.Text = String.Empty;
             AuthInput.Text = String.Empty;
-            GenreList.Text = String.Empty;
+            GenreList.Text = String.Empty;   //clears application 
         }
 
         private void AddBookClick(object sender, EventArgs e)
         {
-            BookClass book = new BookClass();
+            BookClass book = new BookClass();   //creates new book class for user entries
 
             book.TitleProp = TitleInput.Text;
-            book.AuthorProp = AuthInput.Text;
+            book.AuthorProp = AuthInput.Text;   //pulls default constructor
             book.GenreProp = GenreList.Text;
 
             if (string.IsNullOrEmpty(TitleInput.Text))
                 {
-                    MessageBox.Show("Please Enter A Title!");
+                    MessageBox.Show("Please Enter A Title!");   //validation if user doesnt enter anything
                     return;
                 }
               
@@ -106,12 +106,12 @@ namespace MidTermLibraryGUI
             ClearForm();
         }
 
-        private void AddBookForm_Load(object sender, EventArgs e)
+        private void AddBookForm_Load(object sender, EventArgs e) //outputs form to add book
         {
-            Read();
+            Read();            
         }
 
-        private void MainMenu_Click(object sender, EventArgs e)
+        private void MainMenu_Click(object sender, EventArgs e)  //directs you to main menue
         {
             this.Close();
         }

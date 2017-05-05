@@ -14,108 +14,70 @@ namespace MidTermLibraryGUI
 {
     public partial class BookInv : Form
     {
-        private BookClass[] BookArray = new BookClass[1];
-
         public BookInv()
         {
             InitializeComponent();
-        }
-
-        private void Read()
-        {
-            StreamReader sr = new StreamReader("Library.txt");
-                BookArray = new BookClass[Convert.ToInt32(sr.ReadLine())];
-           //  Program.BookArray = new BookClass[Convert.ToInt32(sr.ReadLine())];
-            for (int i = 0; i < BookArray.Length; i++)
-            {
-                BookArray[i] = new BookClass();
-                BookArray[i].TitleProp = sr.ReadLine();
-                BookArray[i].AuthorProp = sr.ReadLine();
-                BookArray[i].GenreProp = sr.ReadLine();
-                BookArray[i].StatusProp = sr.ReadLine();
-                BookArray[i].DueDateProp = sr.ReadLine();
-                BookArray[i].IndexProp = i;
-            }
-
-            sr.Close();
-        }
-
-        private void Write(BookClass book)
-        {
-            StreamWriter sw = new StreamWriter("Library.txt");
-
-            sw.WriteLine(BookArray.Length);
-
-            for (int i = 0; i < BookArray.Length; i++)
-            {
-                sw.WriteLine(BookArray[i].TitleProp);
-                sw.WriteLine(BookArray[i].AuthorProp);
-                sw.WriteLine(BookArray[i].GenreProp);
-                sw.WriteLine(BookArray[i].StatusProp);
-                sw.WriteLine(BookArray[i].DueDateProp);
-            }
-            sw.Close();
         }
 
         private void Display()
         {
             InvBox.Items.Clear();
 
-            for (int i = 0; i < BookArray.Length; i++)
+            for (int i = 0; i < Program.BookArray.Length; i++)
             {
-                InvBox.Items.Add(BookArray[i].ToString());
+                InvBox.Items.Add(Program.BookArray[i].ToString());
             }
         }
 
-        private void ClearForm()
+        private void ClearForm()  //clears screen for next output
         {
             BookInvTitleTxt.Text = String.Empty;
             BookInvAuthTxt.Text = String.Empty;
             GenreList.Text = String.Empty;
         }
 
-        private void Search()
+        private void Search()  //method to search through library text file
         {
             StreamReader sr = new StreamReader("Library.txt");
 
-            BookArray = new BookClass[Convert.ToInt32(sr.ReadLine())];
+            Program.BookArray = new BookClass[Convert.ToInt32(sr.ReadLine())];
 
             string TitleSearch = BookInvTitleTxt.Text;
             string AuthSearch = BookInvAuthTxt.Text;
-            string GenreSeach = GenreList.Text;
+            string GenreSearch = GenreList.Text;            //variables to tell what user is searching for
 
             InvBox.Items.Clear();
 
-            for (int i = 0; i < BookArray.Length; i++)
+            for (int i = 0; i < Program.BookArray.Length; i++)  //for loop searches input through library text file
             {
-                BookArray[i] = new BookClass();
-                BookArray[i].TitleProp = sr.ReadLine();
-                BookArray[i].AuthorProp = sr.ReadLine();
-                BookArray[i].GenreProp = sr.ReadLine();
-                BookArray[i].StatusProp = sr.ReadLine();
-                BookArray[i].DueDateProp = sr.ReadLine();
-                BookArray[i].IndexProp = i;
-
-                if (BookArray[i].TitleProp == TitleSearch || BookArray[i].AuthorProp == AuthSearch || BookArray[i].GenreProp == GenreSeach)
+                Program.BookArray[i] = new BookClass();
+                Program.BookArray[i].TitleProp = sr.ReadLine();
+                Program.BookArray[i].AuthorProp = sr.ReadLine();
+                Program.BookArray[i].GenreProp = sr.ReadLine();
+                Program.BookArray[i].StatusProp = sr.ReadLine();
+                Program.BookArray[i].DueDateProp = sr.ReadLine();
+                Program.BookArray[i].IndexProp = i;
+            
+                if (Program.BookArray[i].TitleProp.ToLower() == TitleSearch.ToLower() || Program.BookArray[i].AuthorProp.ToLower() == AuthSearch.ToLower() || Program.BookArray[i].GenreProp == GenreSearch)
                 {
-                    InvBox.Items.Add(BookArray[i].ToString());
+                    InvBox.Items.Add(Program.BookArray[i].ToString());  
                 }
             }
             sr.Close();
         }
 
-        private void BookInv_Load(object sender, EventArgs e)
+        private void BookInv_Load(object sender, EventArgs e) //button to output inventory
         {
-            Read();
+            BookHelper.Read();
             Display();
         }
 
-        private void SearchButton_Click(object sender, EventArgs e)
+        private void SearchButton_Click(object sender, EventArgs e)  // added button to search
         {
             Search();
         }
 
-        private void InvBox_SelectedIndexChanged(object sender, EventArgs e)
+        private void InvBox_SelectedIndexChanged(object sender, EventArgs e) //output for when user selects book from inventory
         { 
             if (InvBox.SelectedIndex <= 100)
             {
@@ -126,15 +88,27 @@ namespace MidTermLibraryGUI
             }
         }
 
-        private void MainMenu_Click(object sender, EventArgs e)
+        private void MainMenu_Click(object sender, EventArgs e) //button to return to main menu
         {
             this.Close();
         }
 
-        private void UpdateButton_Click(object sender, EventArgs e)
+        private void UpdateButton_Click(object sender, EventArgs e)  //button to update book status
         {
-            Read();
+            BookHelper.Read();
             Display();
+        }
+
+        private void BookInvTitleTxt_KeyDown(object sender, KeyEventArgs e) // added so user can just push enter instead of clicking on actual button
+        {
+            if (e.KeyCode == Keys.Enter)
+                SearchButton.PerformClick();
+        }
+        
+        private void BookInvAuthTxt_KeyDown(object sender, KeyEventArgs e)  //added so user can just push enter instead of clicking on actual button
+        {
+            if (e.KeyCode == Keys.Enter)
+                SearchButton.PerformClick();
         }
     }
 }

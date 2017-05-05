@@ -11,3 +11,29 @@ C:\Users\tdrie\Documents\Visual Studio 2015\Projects\MidTermLibraryGUI\MidTermLi
 C:\Users\tdrie\Documents\Visual Studio 2015\Projects\MidTermLibraryGUI\MidTermLibraryGUI\obj\Debug\MidTermLibraryGUI.BookRet.resources
 C:\Users\tdrie\Documents\Visual Studio 2015\Projects\MidTermLibraryGUI\MidTermLibraryGUI\obj\Debug\MidTermLibraryGUI.MainMenu.resources
 C:\Users\tdrie\Documents\Visual Studio 2015\Projects\MidTermLibraryGUI\MidTermLibraryGUI\obj\Debug\MidTermLibraryGUI.BookPopup.resources
+C:\Users\abe\Documents\Visual Studio 2015\Projects\LibraryProjectMidTermGUI\MidTermLibraryGUI\bin\Debug\MidTermLibraryGUI.exe.config
+C:\Users\abe\Documents\Visual Studio 2015\Projects\LibraryProjectMidTermGUI\MidTermLibraryGUI\obj\Debug\MidTermLibraryGUI.exe
+C:\Users\abe\Documents\Visual Studio 2015\Projects\LibraryProjectMidTermGUI\MidTermLibraryGUI\obj\Debug\MidTermLibraryGUI.pdb
+C:\Users\abe\Documents\Visual Studio 2015\Projects\LibraryProjectMidTermGUI\MidTermLibraryGUI\bin\Debug\MidTermLibraryGUI.exe
+C:\Users\abe\Documents\Visual Studio 2015\Projects\LibraryProjectMidTermGUI\MidTermLibraryGUI\bin\Debug\MidTermLibraryGUI.pdb
+C:\Users\abe\Documents\Visual Studio 2015\Projects\LibraryProjectMidTermGUI\MidTermLibraryGUI\obj\Debug\MidTermLibraryGUI.csprojResolveAssemblyReference.cache
+C:\Users\abe\Documents\Visual Studio 2015\Projects\LibraryProjectMidTermGUI\MidTermLibraryGUI\obj\Debug\MidTermLibraryGUI.AddBookForm.resources
+C:\Users\abe\Documents\Visual Studio 2015\Projects\LibraryProjectMidTermGUI\MidTermLibraryGUI\obj\Debug\MidTermLibraryGUI.BookInv.resources
+C:\Users\abe\Documents\Visual Studio 2015\Projects\LibraryProjectMidTermGUI\MidTermLibraryGUI\obj\Debug\MidTermLibraryGUI.BookPopup.resources
+C:\Users\abe\Documents\Visual Studio 2015\Projects\LibraryProjectMidTermGUI\MidTermLibraryGUI\obj\Debug\MidTermLibraryGUI.BookRet.resources
+C:\Users\abe\Documents\Visual Studio 2015\Projects\LibraryProjectMidTermGUI\MidTermLibraryGUI\obj\Debug\MidTermLibraryGUI.MainMenu.resources
+C:\Users\abe\Documents\Visual Studio 2015\Projects\LibraryProjectMidTermGUI\MidTermLibraryGUI\obj\Debug\MidTermLibraryGUI.Properties.Resources.resources
+C:\Users\abe\Documents\Visual Studio 2015\Projects\LibraryProjectMidTermGUI\MidTermLibraryGUI\obj\Debug\MidTermLibraryGUI.csproj.GenerateResource.Cache
+C:\Users\paperspace\Desktop\LibraryProjectMidTermGUI\MidTermLibraryGUI\bin\Debug\MidTermLibraryGUI.exe.config
+C:\Users\paperspace\Desktop\LibraryProjectMidTermGUI\MidTermLibraryGUI\obj\Debug\MidTermLibraryGUI.exe
+C:\Users\paperspace\Desktop\LibraryProjectMidTermGUI\MidTermLibraryGUI\obj\Debug\MidTermLibraryGUI.pdb
+C:\Users\paperspace\Desktop\LibraryProjectMidTermGUI\MidTermLibraryGUI\bin\Debug\MidTermLibraryGUI.exe
+C:\Users\paperspace\Desktop\LibraryProjectMidTermGUI\MidTermLibraryGUI\bin\Debug\MidTermLibraryGUI.pdb
+C:\Users\paperspace\Desktop\LibraryProjectMidTermGUI\MidTermLibraryGUI\obj\Debug\MidTermLibraryGUI.csprojResolveAssemblyReference.cache
+C:\Users\paperspace\Desktop\LibraryProjectMidTermGUI\MidTermLibraryGUI\obj\Debug\MidTermLibraryGUI.AddBookForm.resources
+C:\Users\paperspace\Desktop\LibraryProjectMidTermGUI\MidTermLibraryGUI\obj\Debug\MidTermLibraryGUI.BookInv.resources
+C:\Users\paperspace\Desktop\LibraryProjectMidTermGUI\MidTermLibraryGUI\obj\Debug\MidTermLibraryGUI.BookPopup.resources
+C:\Users\paperspace\Desktop\LibraryProjectMidTermGUI\MidTermLibraryGUI\obj\Debug\MidTermLibraryGUI.BookRet.resources
+C:\Users\paperspace\Desktop\LibraryProjectMidTermGUI\MidTermLibraryGUI\obj\Debug\MidTermLibraryGUI.MainMenu.resources
+C:\Users\paperspace\Desktop\LibraryProjectMidTermGUI\MidTermLibraryGUI\obj\Debug\MidTermLibraryGUI.Properties.Resources.resources
+C:\Users\paperspace\Desktop\LibraryProjectMidTermGUI\MidTermLibraryGUI\obj\Debug\MidTermLibraryGUI.csproj.GenerateResource.Cache
